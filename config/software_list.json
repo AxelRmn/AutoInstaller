@@ -1,0 +1,14 @@
+{
+    "software": [
+     {
+        "name": "Google Chrome",
+        "installer_path": "installers/chrome_installer.exe",
+        "silent_flag": "/silent"
+     },
+     {
+        "name": "VLC",
+        "installer_path": "installers/vlc_installer.exe",
+        "silent_flag": "/S"
+     }
+    ]
+}
