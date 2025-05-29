@@ -1,7 +1,7 @@
 import json, subprocess, os, datetime, platform
 
 def log(message):
-    with open("logs/install_log.txt", "a") as f:
+    with open("logs/install_log.txt", "a", encoding="utf-8") as f:
         f.write(f"{datetime.datetime.now()} - {message}\n")
     print(message)
 
