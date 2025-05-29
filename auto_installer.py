@@ -11,8 +11,11 @@ def log(message):
     timestamp = f"{datetime.datetime.now()} - {message}\n"
     with open("logs/install_log.txt", "a", encoding="utf-8") as f:
         f.write(timestamp)
+
+    log_area.config(state="normal") 
     log_area.insert(tk.END, timestamp)
     log_area.see(tk.END)
+    log_area.config(state="disabled")  
     print(message)
 
 def install_software(name, path, flag):
@@ -165,6 +168,7 @@ log_area = scrolledtext.ScrolledText(
     font=("Consolas", 9)
 )
 log_area.pack(pady=5)
+log_area.config(state="disabled")
 
 # Start the GUI
 root.mainloop()

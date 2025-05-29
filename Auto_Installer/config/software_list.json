@@ -1,0 +1,34 @@
+{
+    "software": [
+     {
+        "name": "Google Chrome",
+        "installer_path": "installers/chrome_installer.exe",
+        "silent_flag": "/silent"
+     },
+     {
+        "name": "VLC",
+        "installer_path": "installers/vlc_installer.exe",
+        "silent_flag": "/S"
+     },
+     {
+        "name": "Firefox",
+        "installer_path": "installers/firefox_installer.exe",
+        "silent_flag": "/S"
+     },
+     {
+        "name": "7 Zip",
+        "installer_path": "installers/7zip_installer.exe",
+        "silent_flag": "/S"
+     },
+     {
+        "name": "Adobe Reader PDF",
+        "installer_path": "installers/adobereaderpdf_installer.exe",
+        "silent_flag": "/S"
+     },
+     {
+        "name": "Notepad++",
+        "installer_path": "installers/notepad_installer.exe",
+        "silent_flag": "/S"
+     }
+    ]
+}

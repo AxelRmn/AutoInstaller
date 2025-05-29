@@ -1,0 +1,13 @@
+# Required packages for Software Auto Installer (Windows-only)
+
+# HTTP requests for updater script
+requests>=2.31.0
+
+# GUI framework (included in standard library, but required for packaging)
+tk
+
+# Windows Registry access (standard, no installation needed)
+# winreg is built-in on Windows, included here for documentation purposes
+
+# Note: All other modules used (json, os, subprocess, datetime, platform)
+# are part of the Python Standard Library and do not require separate installation.
