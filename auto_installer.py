@@ -39,6 +39,21 @@ def is_running_from_usb():
     current_drive = os.path.splitdrive(os.getcwd())[0]
     return current_drive.upper() != "C:"
 
+def update_installers_from_gui():
+    """Run the updater script to download the latest installers."""
+    try:
+        log("[~] Running updater script...")
+        exit_code = os.system("python updater.py")
+        if exit_code == 0:
+            log("[✔] Installer update completed successfully.")
+            messagebox.showinfo("Update Complete", "Latest installers have been downloaded.")
+        else:
+            log("[✖] Error occurred while running updater.")
+            messagebox.showerror("Update Failed", "There was an error running updater.py")
+    except Exception as e:
+        log(f"[✖] Exception: {str(e)}")
+        messagebox.showerror("Update Failed", f"An error occurred:\n{e}")
+
 def is_software_installed(display_name):
     """Check the Windows Registry to see if the software is already installed."""
     registry_hives = [
@@ -140,6 +155,18 @@ for i, s in enumerate(software_data):
     )
     cb.pack(anchor='w', pady=2)
     checkbox_vars.append(var)
+
+# Updater button
+tk.Button(
+    root,
+    text="Update Installers",
+    command=update_installers_from_gui,
+    bg="#008CBA",
+    fg="white",
+    font=button_font,
+    padx=10,
+    pady=5
+).pack(pady=(5, 0))
 
 # Install button
 tk.Button(
