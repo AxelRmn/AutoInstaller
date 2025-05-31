@@ -102,7 +102,7 @@ root = tk.Tk()
 root.title("Software Auto Installer")
 root.geometry("650x520")
 root.configure(bg="#f5f5f5")
-root.resizable(False, False)
+root.resizable(True, True)
 
 # Font definitions for consistent styling
 title_font = ("Segoe UI", 12, "bold")
@@ -135,17 +135,22 @@ checkbox_vars = []
 frame = tk.Frame(root, bg="#f5f5f5")
 frame.pack()
 
-# Create two columns for software selection
-left_col = tk.Frame(frame, bg="#f5f5f5")
-right_col = tk.Frame(frame, bg="#f5f5f5")
-left_col.pack(side="left", padx=30)
-right_col.pack(side="right", padx=30)
+# Create three columns for software selection
+col1 = tk.Frame(frame, bg="#f5f5f5")
+col2 = tk.Frame(frame, bg="#f5f5f5")
+col3 = tk.Frame(frame, bg="#f5f5f5")
 
-# Distribute checkboxes across two columns
+col1.pack(side="left", padx=15)
+col2.pack(side="left", padx=15)
+col3.pack(side="left", padx=15)
+
+# Distribute 9 software items across 3 columns (3 per column)
+columns = [col1, col2, col3]
 for i, s in enumerate(software_data):
     var = tk.BooleanVar()
+    target_col = columns[i // 3]  # 0–2 goes to col1, 3–5 to col2, 6–8 to col3
     cb = tk.Checkbutton(
-        left_col if i < 3 else right_col,
+        target_col,
         text=s["name"],
         variable=var,
         font=label_font,

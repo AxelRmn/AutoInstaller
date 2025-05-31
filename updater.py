@@ -26,7 +26,10 @@ def main():
         "firefox_installer": "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=en-US",
         "7zip_installer": "https://www.7-zip.org/a/7z2301-x64.exe",
         "adobereaderpdf_installer": "https://get.adobe.com/es/reader/download?os=Windows+10&name=Reader+2025.001.20467+Spanish+Windows%2864Bit%29&lang=es&nativeOs=Windows+10&accepted=&declined=mss&preInstalled=&site=landing",
-        "notepad_installer": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.1/npp.8.8.1.Installer.x64.exe"
+        "notepad_installer": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.1/npp.8.8.1.Installer.x64.exe",
+        "vscode_installer": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
+        "libreoffice_installer": "https://download.documentfoundation.org/libreoffice/stable/25.2.3/win/x86_64/LibreOffice_25.2.3_Win_x86-64.msi",
+        "anydesk_installer": "https://anydesk.com/es/downloads/thank-you?dv=win_exe",
     }
 
     print("=== Software Auto-Updater Started ===\n")

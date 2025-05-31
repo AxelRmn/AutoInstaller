@@ -4,18 +4,18 @@ Este proyecto es una herramienta de escritorio desarrollada en Python con interf
 
 
 ## Características principales
-
-- Interfaz gráfica intuitiva (Tkinter)
-- Instalación silenciosa de múltiples programas
-- Detección de software ya instalado (para evitar duplicados)
-- Registro de actividad en tiempo real (`logs/install_log.txt`)
-- Modo portátil desde USB (detectado automáticamente)
-- Botón para actualización automática de instaladores
-- Basado en rutas relativas (ideal para portabilidad)
-
+- Interfaz gráfica moderna e intuitiva
+- Instalación silenciosa y desatendida de múltiples programas
+- Detección de software ya instalado para evitar duplicados
+- Registro detallado de actividad (`logs/install_log.txt`)
+- Detección automática de ejecución en modo portátil (USB)
+- Actualización automática de instaladores mediante `updater.py`
+- Basado en rutas relativas (sin rutas absolutas)
+ 
 
 ## Estructura del proyecto
 
+```
 AutoInstaller/
 ├── auto_installer.py               # Script principal con la GUI
 ├── updater.py                      # Descarga automática de instaladores
@@ -27,6 +27,7 @@ AutoInstaller/
 ├── installers/                     # Instaladores descargados o manuales
 ├── logs/
 │   └── install_log.txt             # Registro generado automáticamente
+```
 
 
 ## Requisitos
@@ -95,7 +96,15 @@ Abre `config/software_list.json` y añade un nuevo bloque como este:
 }
 ```
 
-> Asegúrate de usar el **nombre correcto del instalador** y el **parámetro de instalación silenciosa** adecuado.
+### (Opcional) Si deseas que se descargue automáticamente, edita updater.py:
+
+```
+software = {
+    "nombre_instalador": "https://enlace.oficial/descarga.exe"
+}
+```
+
+> Asegúrate de usar el nombre exacto del archivo y la bandera correcta para instalación silenciosa (por ejemplo, /S, /silent, etc.).
 
 
 ## Modo portátil (USB)

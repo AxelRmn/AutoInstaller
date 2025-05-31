@@ -6,13 +6,13 @@
         "silent_flag": "/silent"
      },
      {
-        "name": "VLC",
-        "installer_path": "installers/vlc_installer.exe",
+        "name": "Firefox",
+        "installer_path": "installers/firefox_installer.exe",
         "silent_flag": "/S"
      },
      {
-        "name": "Firefox",
-        "installer_path": "installers/firefox_installer.exe",
+        "name": "VLC",
+        "installer_path": "installers/vlc_installer.exe",
         "silent_flag": "/S"
      },
      {
@@ -28,6 +28,21 @@
      {
         "name": "Notepad++",
         "installer_path": "installers/notepad_installer.exe",
+        "silent_flag": "/S"
+     },
+     {
+        "name": "Visual Studio Code",
+        "installer_path": "installers/vscode_installer.exe",
+        "silent_flag": "/S"
+     },
+     {
+        "name": "LibreOffice",
+        "installer_path": "installers/libreoffice_installer.exe",
+        "silent_flag": "/S"
+     },
+     {
+        "name": "AnyDesk",
+        "installer_path": "installers/anydesk_installer.exe",
         "silent_flag": "/S"
      }
     ]
