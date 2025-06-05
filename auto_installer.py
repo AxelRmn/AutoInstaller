@@ -2,6 +2,8 @@ import json, subprocess, os, datetime, platform
 import tkinter as tk
 from tkinter import messagebox, scrolledtext
 import winreg
+import ctypes
+import platform
 
 # ----------------------------- Core Functions -----------------------------
 
@@ -96,6 +98,16 @@ def run_installer():
             install_software(sw["name"], sw["installer_path"], sw["silent_flag"])
 
 # ----------------------------- GUI Layout -----------------------------
+
+# Enable high-DPI awareness on Windows to improve GUI clarity
+if platform.system() == "Windows":
+    try:
+        ctypes.windll.shcore.SetProcessDpiAwareness(1)  # Windows 8.1+
+    except Exception:
+        try:
+            ctypes.windll.user32.SetProcessDPIAware()  # Windows 7/8 fallback
+        except Exception:
+            pass
 
 # Create the main application window
 root = tk.Tk()
